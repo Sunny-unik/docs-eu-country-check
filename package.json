@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "node dist/index.js",
-    "dev": "nodemon -r esm src/index.js",
+    "dev": "nodemon",
     "build": "npm run build:views && esbuild src/index.js --bundle --outfile=dist/index.js --platform=node --loader:.js=jsx",
     "build:views": "esbuild src/views/index.jsx --bundle --outfile=dist/assets/app.js --loader:.js=jsx"
   },
