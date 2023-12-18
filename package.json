@@ -1,0 +1,37 @@
+{
+  "name": "docs-eu-country-check",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "src/index.js",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.js",
+    "build": "esbuild src/index.js --bundle --outfile=dist/index.js --platform=node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunny-unik/docs-eu-country-check.git"
+  },
+  "keywords": [
+    "eu-country-check",
+    "node",
+    "express",
+    "react"
+  ],
+  "author": "Sunny Gandhwani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sunny-unik/docs-eu-country-check/issues"
+  },
+  "homepage": "https://github.com/Sunny-unik/docs-eu-country-check#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "esbuild": "^0.19.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
