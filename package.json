@@ -7,7 +7,8 @@
     "prestart": "npm run build",
     "start": "node dist/index.js",
     "dev": "nodemon -r esm src/index.js",
-    "build": "esbuild src/index.js --bundle --outfile=dist/index.js --platform=node"
+    "build": "npm run build:views && esbuild src/index.js --bundle --outfile=dist/index.js --platform=node --loader:.js=jsx",
+    "build:views": "esbuild src/views/index.jsx --bundle --outfile=dist/assets/app.js --loader:.js=jsx"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "esbuild": "^0.19.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "esm": "^3.2.25",
