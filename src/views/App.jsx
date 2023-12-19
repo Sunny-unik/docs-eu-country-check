@@ -8,10 +8,10 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <h1>Hello World!</h1>
       <h2>{clientMessage}</h2>
-    </>
+    </div>
   );
 };
 
