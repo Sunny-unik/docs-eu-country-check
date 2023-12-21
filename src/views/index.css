@@ -52,9 +52,15 @@ header {
   font-size: 1.5rem;
 }
 
+.nav-items {
+  display: flex;
+  align-items: stretch;
+}
+
 .nav-item {
   display: inline-block;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  margin-block: auto;
 }
 
 .nav-item a:hover {
