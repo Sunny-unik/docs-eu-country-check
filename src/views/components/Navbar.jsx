@@ -24,7 +24,8 @@ export default function Navbar() {
             <SimpleIcons
               name="github"
               alt="npm logo"
-              darkModeColor="ffffff"
+              color="fff"
+              darkModeColor="fff"
               width="28px"
               height="28px"
             />
