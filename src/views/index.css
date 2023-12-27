@@ -71,3 +71,7 @@ header {
   background-color: black;
   border-radius: 1rem;
 }
+
+code {
+  color: goldenrod;
+}

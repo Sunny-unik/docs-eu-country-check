@@ -5,6 +5,7 @@ import path from "path";
 import fs from "fs";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
+import { StaticRouter } from "react-router-dom/server";
 import App from "../views/App";
 
 config();
@@ -16,14 +17,18 @@ app.use(express.static(path.join(__dirname, "assets")));
 
 app.get("/health", (_req, res) => res.send("OK"));
 
-app.get("/", (_req, res) => {
+app.get("*", (_req, res) => {
   fs.readFile(path.resolve("public/index.html"), "utf8", (err, data) => {
     if (err) return res.status(500).send("Internal Server Error");
 
     return res.send(
       data.replace(
         '<div id="root"></div>',
-        `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>`
+        `<div id="root">${ReactDOMServer.renderToString(
+          <StaticRouter>
+            <App />
+          </StaticRouter>
+        )}</div>`
       )
     );
   });

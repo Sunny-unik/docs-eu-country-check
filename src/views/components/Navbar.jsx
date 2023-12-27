@@ -9,7 +9,7 @@ export default function Navbar() {
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <a href="/#">Docs</a>
+          <a href="/docs">Docs</a>
         </li>
         <li className="nav-item">
           <a

@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import routes from "../shared/routes";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 const App = () => {
-  const [clientMessage, setClientMessage] = useState("");
-
-  useEffect(() => {
-    setClientMessage("Hello From React");
-  }, []);
-
   return (
     <>
       <header>
         <Navbar />
       </header>
       <main className="container">
-        <h1>Hello World!</h1>
-        <h2>{clientMessage}</h2>
+        <Routes>
+          {routes.map(({ path, exact, component: C, ...rest }) => (
+            <Route key={path} path={path} element={<C {...rest} />} />
+          ))}
+        </Routes>
       </main>
-      <footer></footer>
     </>
   );
 };
