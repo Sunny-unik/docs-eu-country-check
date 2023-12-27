@@ -5,7 +5,7 @@ import path from "path";
 import fs from "fs";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import App from "./views/App";
+import App from "../views/App";
 
 config();
 const app = express();

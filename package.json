@@ -2,12 +2,12 @@
   "name": "docs-eu-country-check",
   "version": "1.0.0",
   "description": "<div align=\"center\">",
-  "main": "src/index.js",
+  "main": "src/server/index.js",
   "scripts": {
     "prestart": "npm run build",
-    "start": "node dist/index.js",
+    "start": "node dist/server.js",
     "dev": "nodemon",
-    "build": "npm run build:views && esbuild src/index.js --bundle --outfile=dist/index.js --platform=node --loader:.js=jsx",
+    "build": "npm run build:views && esbuild src/server/index.js --bundle --outfile=dist/server.js --platform=node --loader:.js=jsx",
     "build:views": "esbuild src/views/index.jsx --bundle --outfile=dist/assets/app.js --loader:.js=jsx"
   },
   "repository": {
