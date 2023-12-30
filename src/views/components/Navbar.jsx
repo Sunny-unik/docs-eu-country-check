@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="navbar container">
       <div className="navbar-brand">
-        <a href="/">Dashboard</a>
+        <a href="/">Intro</a>
       </div>
       <ul className="nav-items">
         <li className="nav-item">
@@ -13,14 +13,19 @@ export default function Navbar() {
         </li>
         <li className="nav-item">
           <a
-            href="https://github.com/sunny-unik/eu-country-check"
+            href="https://npmjs.com/package/eu-country-check"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <SimpleIcons name="npm" alt="npm logo" width="28px" height="28px" />
           </a>
         </li>
         <li className="nav-item">
-          <a href="https://npmjs.com/package/eu-country-check" target="_blank">
+          <a
+            href="https://github.com/sunny-unik/eu-country-check"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <SimpleIcons
               name="github"
               alt="npm logo"
