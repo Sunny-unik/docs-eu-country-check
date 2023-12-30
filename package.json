@@ -1,9 +1,10 @@
 {
   "name": "docs-eu-country-check",
   "version": "1.0.0",
-  "description": "<div align=\"center\">",
+  "description": "",
   "main": "src/server/index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "npm run build",
     "start": "node dist/server.js",
     "dev": "nodemon",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "esm": "^3.2.25",
+    "fs-extra": "^11.2.0",
     "nodemon": "^3.0.2"
   }
 }

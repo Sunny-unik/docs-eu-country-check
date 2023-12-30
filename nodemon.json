@@ -2,6 +2,6 @@
   "watch": ["src", "public"],
   "ignore": ["*.test.ts", "node_modules"],
   "ext": "js,jsx,html,json",
-  "exec": "npm start",
+  "exec": "node assets.config.js && npm start",
   "quiet": true
 }
