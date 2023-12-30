@@ -13,13 +13,13 @@ a:hover {
   text-decoration: underline;
 }
 
-header {
-  background-color: #20232a;
-  color: #f7f7f7;
-}
-
 code {
   color: goldenrod;
+}
+
+.dark {
+  background-color: #20232a;
+  color: #f7f7f7;
 }
 
 .container {
@@ -28,8 +28,8 @@ code {
   margin: 0 auto;
 }
 
-.hero-section {
-  height: 40vh;
+.vertical-space {
+  height: 46vh;
 }
 
 .text-center {
@@ -86,4 +86,14 @@ code {
 
 .flex {
   display: flex;
+}
+
+.info-banner {
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: #f7f7f7;
+}
+
+.justify-content-between {
+  justify-content: space-between;
 }
