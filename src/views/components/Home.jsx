@@ -14,7 +14,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <code> eu-country-check </code>
+              <code className="premium-color"> eu-country-check </code>
             </a>
             official website.
           </h3>
@@ -24,7 +24,7 @@ export default function Home() {
       {/* Info Banner Section */}
       <div className="info-banner">
         <div className="container">
-          <h4>
+          <h4 className="helvetica">
             This project help to check provided which countries are part of EU
             (European Union) or EEA (European Economic Area).
           </h4>

@@ -1,15 +1,16 @@
 import React from "react";
 import SimpleIcons from "./SimpleIcons";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="navbar container">
       <div className="navbar-brand">
-        <a href="/">Intro</a>
+        <NavLink to="/">Intro</NavLink>
       </div>
       <ul className="nav-items">
         <li className="nav-item">
-          <a href="/docs">Docs</a>
+          <NavLink to="/docs">Docs</NavLink>
         </li>
         <li className="nav-item">
           <a
