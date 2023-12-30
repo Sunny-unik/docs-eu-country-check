@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, "assets")));
 
 app.get("/health", (_req, res) => res.send("OK"));
 
-app.get("*", (_req, res) => {
+app.get("*", (req, res) => {
   fs.readFile(path.resolve("public/index.html"), "utf8", (err, data) => {
     if (err) return res.status(500).send("Internal Server Error");
 
@@ -25,7 +25,7 @@ app.get("*", (_req, res) => {
       data.replace(
         '<div id="root"></div>',
         `<div id="root">${ReactDOMServer.renderToString(
-          <StaticRouter>
+          <StaticRouter location={req.url}>
             <App />
           </StaticRouter>
         )}</div>`
