@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import NewTabIconDark from "./NewTabIconDark";
+import NewTabIcon from "./NewTabIcon";
 
 export default function Footer() {
   return (
@@ -21,7 +21,7 @@ export default function Footer() {
         <div>
           Copyright © 2023{" "}
           <a href="">
-            Sunny Gandhwani <NewTabIconDark />{" "}
+            Sunny Gandhwani <NewTabIcon />{" "}
           </a>
         </div>
       </div>
