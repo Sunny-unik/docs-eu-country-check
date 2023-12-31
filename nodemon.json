@@ -1,7 +1,6 @@
 {
-  "watch": ["src", "public"],
+  "watch": ["dist"],
   "ignore": ["*.test.ts", "node_modules"],
-  "ext": "js,jsx,html,json",
-  "exec": "node assets.config.js && npm start",
+  "exec": "node dist/server.js",
   "quiet": true
 }
