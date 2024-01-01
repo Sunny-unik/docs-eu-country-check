@@ -37,9 +37,7 @@ function esbuildPlugins(mode) {
   };
 
   const serverCtx = await buildFunction(serverBuildOptions);
-  console.log("Server build successfully");
   const viewsCtx = await buildFunction(viewsBuildOptions);
-  console.log("Views build successfully");
 
   if (process.env.NODE_ENV !== "development") return;
   await serverCtx.watch();
