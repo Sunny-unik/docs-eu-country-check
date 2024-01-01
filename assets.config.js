@@ -1,5 +1,7 @@
 const fsExtra = require("fs-extra");
+const fs = require("node:fs");
 const chokidar = require("chokidar");
+const path = require("path");
 
 function removeAssets(dirToRemove = "dist/assets") {
   try {
@@ -31,13 +33,31 @@ function initChokidar() {
   });
 
   watcher
-    .on("ready", () => console.log("Chokidar watching:", watcher.getWatched()))
-    .on("add", (path) => copyAssets())
-    .on("change", (path, stats) => console.log("change", path, stats))
-    .on("unlink", (path) => console.log("unlink", path))
-    .on("addDir", (path) => console.log("addDir", path))
-    .on("unlinkDir", (path) => console.log("unlinkDir", path))
-    .on("error", (error) => console.log(error));
-}
+    .on("ready", () => console.log("Chokidar Watching:", watcher.getWatched()))
+    .on("add", (path) => copyFile(path))
+    .on("unlink", (path) => removeFile(path))
+    .on("change", (path, _stats) => {
+      removeFile(path);
+      copyFile(path);
+    })
+    .on("error", (error) => console.log("Chokidar Watch Error:", error));
 
+  function copyFile(sourcePath) {
+    const destinationPath = path.join("dist/assets", path.basename(sourcePath));
+    fs.copyFile(sourcePath, destinationPath, (error) => {
+      if (error) return console.log(error);
+      console.log(sourcePath, "copied successfully");
+    });
+  }
+
+  function removeFile(sourcePath) {
+    const destinationPath = path.join("dist/assets", path.basename(sourcePath));
+    try {
+      fs.rmSync(destinationPath);
+      console.log(destinationPath, "removed successfully");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
 process.env.NODE_ENV === "development" && initChokidar();
