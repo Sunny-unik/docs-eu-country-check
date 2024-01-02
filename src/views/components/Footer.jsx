@@ -7,7 +7,7 @@ import GitHubButton from "react-github-btn";
 export default function Footer() {
   return (
     <footer className="dark w-100 vertical-space flex column justify-content-between">
-      <div className="flex container justify-content-between">
+      <div className="flex small-column container justify-content-around">
         <div className="box">
           <h3 className="text-muted helvetica">Documentation</h3>
           <ul>
@@ -20,7 +20,71 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="box">something</div>
+        <div className="box">
+          <h3 className="text-muted helvetica">Insights</h3>
+          <ul>
+            <li>
+              <a
+                href="https://bundlephobia.com/package/eu-country-check"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Bundlephobia
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://snyk.io/advisor/npm-package/eu-country-check"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <b>Synk</b>Advisor
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://socket.dev/npm/package/eu-country-check"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Socket.dev
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="box">
+          <h3 className="text-muted helvetica">More</h3>
+          <ul>
+            <li>
+              <a
+                href="https://classic.yarnpkg.com/en/package/eu-country-check"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Yarn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://moiva.io/?npm=eu-country-check"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Moiva
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://npmtrends.com/eu-country-check"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Npmtrends
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className="box text-center">

@@ -41,7 +41,7 @@ a:hover {
 }
 
 .vertical-space {
-  height: 46vh;
+  min-height: 46vh;
 }
 
 .helvetica {
@@ -106,6 +106,18 @@ a:hover {
 }
 .justify-content-between {
   justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+@media (max-width: 480px) {
+  .small-column {
+    flex-direction: column;
+    text-align: center;
+  }
+  .small-column li {
+    list-style: none;
+  }
 }
 
 .info-banner {
