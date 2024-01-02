@@ -26,6 +26,7 @@ function esbuildPlugins(mode) {
     platform: "node",
     loader: { ".js": "jsx" },
     bundle: true,
+    minify: process.env.NODE_ENV === "production",
     plugins: esbuildPlugins("Server"),
   };
   const viewsBuildOptions = {
@@ -33,6 +34,7 @@ function esbuildPlugins(mode) {
     outfile: "dist/assets/app.js",
     loader: { ".js": "jsx" },
     bundle: true,
+    minify: process.env.NODE_ENV === "production",
     plugins: esbuildPlugins("Views"),
   };
 
