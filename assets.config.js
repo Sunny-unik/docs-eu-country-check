@@ -2,11 +2,12 @@ const fsExtra = require("fs-extra");
 const fs = require("node:fs");
 const chokidar = require("chokidar");
 const path = require("path");
+const chalk = require("chalk");
 
 function removeAssets(dirToRemove = "dist/assets") {
   try {
     fsExtra.removeSync(dirToRemove);
-    console.log("Public directory removed successfully");
+    console.log(chalk.yellow("Public directory removed successfully"));
   } catch (error) {
     console.log(new Error("Error in remove dist/assets directory"));
   }
@@ -21,7 +22,7 @@ function copyAssets(
   fsExtra.copy(sourcePath, destination, { filter }, (error) => {
     if (error)
       return console.log(new Error("Error in update dist/assets directory"));
-    console.log("Public directory updated successfully");
+    console.log(chalk.green("Public directory updated successfully\n"));
   });
 }
 copyAssets();
@@ -33,7 +34,9 @@ function initChokidar() {
   });
 
   watcher
-    .on("ready", () => console.log("Chokidar Watching:", watcher.getWatched()))
+    .on("ready", () =>
+      console.log(chalk.blue("Chokidar Watching:", watcher.getWatched()))
+    )
     .on("add", (path) => copyFile(path))
     .on("unlink", (path) => removeFile(path))
     .on("change", (path, _stats) => {
@@ -46,7 +49,7 @@ function initChokidar() {
     const destinationPath = path.join("dist/assets", path.basename(sourcePath));
     fs.copyFile(sourcePath, destinationPath, (error) => {
       if (error) return console.log(error);
-      console.log(sourcePath, "copied successfully");
+      console.log(chalk.blue(sourcePath, "copied successfully"));
     });
   }
 
@@ -54,7 +57,7 @@ function initChokidar() {
     const destinationPath = path.join("dist/assets", path.basename(sourcePath));
     try {
       fs.rmSync(destinationPath);
-      console.log(destinationPath, "removed successfully");
+      console.log(chalk.blue(destinationPath, "removed successfully"));
     } catch (error) {
       console.log(error);
     }
