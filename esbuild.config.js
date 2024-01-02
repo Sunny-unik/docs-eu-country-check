@@ -49,7 +49,7 @@ function esbuildPlugins(mode) {
 
   if (nodeENV !== "development") return;
   await serverCtx.watch();
-  console.log("Watching Server");
+  console.log(chalk.blue("Watching Server"));
   await viewsCtx.watch();
-  console.log("Watching Views");
+  console.log(chalk.blue("Watching Views"));
 })();
