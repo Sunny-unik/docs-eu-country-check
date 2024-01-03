@@ -37,6 +37,22 @@ export default function Navbar() {
             />
           </a>
         </li>
+        <li
+          className="nav-item"
+          id="sideNavBtn"
+          onClick={() =>
+            document.querySelector(".side-nav").classList.toggle("open")
+          }
+        >
+          <SimpleIcons
+            name="x"
+            alt="x logo"
+            color="fff"
+            darkModeColor="fff"
+            width="28px"
+            height="28px"
+          />
+        </li>
       </ul>
     </nav>
   );

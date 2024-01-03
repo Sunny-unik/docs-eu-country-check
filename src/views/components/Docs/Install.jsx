@@ -3,7 +3,7 @@ import SideNav from "./SideNav";
 
 export default function Install() {
   return (
-    <div className="flex vertical-space container">
+    <div className="flex vertical-space container docs-container">
       <SideNav />
       <h1>Installation</h1>
     </div>
