@@ -1,7 +1,6 @@
 import React from "react";
 import SimpleIcons from "./SimpleIcons";
 import { NavLink, useLocation } from "react-router-dom";
-import Hamburger from "./Hamburger";
 
 export default function Navbar() {
   const isDocsRoute = useLocation().pathname.includes("/docs");
@@ -47,7 +46,12 @@ export default function Navbar() {
               document.querySelector(".side-nav").classList.toggle("open")
             }
           >
-            <Hamburger />
+            <img
+              src="/hamburger.svg"
+              alt="sideMenu icon"
+              width="28px"
+              height="28px"
+            />
           </li>
         )}
       </ul>

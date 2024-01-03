@@ -37,8 +37,8 @@ function initChokidar() {
     .on("ready", () =>
       console.log(chalk.blue("Chokidar Watching:", watcher.getWatched()))
     )
-    .on("add", (path) => copyFile(path))
     .on("unlink", (path) => removeFile(path))
+    .on("add", (path) => copyFile(path))
     .on("change", (path, _stats) => {
       removeFile(path);
       copyFile(path);

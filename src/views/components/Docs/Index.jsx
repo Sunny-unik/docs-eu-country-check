@@ -1,12 +1,11 @@
 import React from "react";
-import SideNav from "./SideNav";
+import Layout from "./Layout";
 
 function Docs() {
   return (
-    <div className="flex vertical-space container docs-container">
-      <SideNav />
+    <Layout>
       <h1>Getting Started</h1>
-    </div>
+    </Layout>
   );
 }
 

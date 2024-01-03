@@ -1,11 +1,10 @@
 import React from "react";
-import SideNav from "./SideNav";
+import Layout from "./Layout";
 
 export default function Install() {
   return (
-    <div className="flex vertical-space container docs-container">
-      <SideNav />
+    <Layout>
       <h1>Installation</h1>
-    </div>
+    </Layout>
   );
 }
