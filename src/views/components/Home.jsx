@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Home() {
   return (
-    <>
+    <div className="vertical-space flex justify-content-between column">
       {/* Hero Section */}
-      <div className="container vertical-space flex">
-        <div className="margin-auto text-center">
+      <div className="container small-vertical-space margin-auto text-center flex justify-content-center">
+        <div className="small-margin-auto">
           <h1>Hello World!</h1>
           <h3>
             This is
@@ -30,6 +30,6 @@ export default function Home() {
           </h4>
         </div>
       </div>
-    </>
+    </div>
   );
 }

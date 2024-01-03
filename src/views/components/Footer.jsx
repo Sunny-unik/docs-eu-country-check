@@ -9,21 +9,6 @@ export default function Footer() {
     <footer className="dark w-100 flex column justify-content-between">
       <div className="flex small-column container justify-content-around">
         <div className="box">
-          <h3 className="text-muted helvetica">Documentation</h3>
-          <ul>
-            <li>
-              <NavLink to="/docs">Getting Started</NavLink>
-            </li>
-            <li>
-              <NavLink to="/docs/install">Installation</NavLink>
-            </li>
-            <li>
-              <NavLink to="/docs/usage">Usage</NavLink>
-            </li>
-          </ul>
-        </div>
-
-        <div className="box">
           <h3 className="text-muted helvetica">Insights</h3>
           <ul>
             <li>
@@ -52,6 +37,21 @@ export default function Footer() {
               >
                 Socket.dev <NewTabIcon />
               </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="box">
+          <h3 className="text-muted helvetica">Documentation</h3>
+          <ul>
+            <li>
+              <NavLink to="/docs">Getting Started</NavLink>
+            </li>
+            <li>
+              <NavLink to="/docs/install">Installation</NavLink>
+            </li>
+            <li>
+              <NavLink to="/docs/usage">Usage</NavLink>
             </li>
           </ul>
         </div>
