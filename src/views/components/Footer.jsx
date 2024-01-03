@@ -29,7 +29,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Bundlephobia
+                Bundlephobia <NewTabIcon />
               </a>
             </li>
             <li>
@@ -38,7 +38,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <b>Synk</b>Advisor
+                <b>Synk</b>Advisor <NewTabIcon />
               </a>
             </li>
             <li>
@@ -47,7 +47,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Socket.dev
+                Socket.dev <NewTabIcon />
               </a>
             </li>
           </ul>
@@ -62,7 +62,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Yarn
+                Yarn <NewTabIcon />
               </a>
             </li>
             <li>
@@ -71,7 +71,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Moiva
+                Moiva <NewTabIcon />
               </a>
             </li>
             <li>
@@ -80,7 +80,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Npmtrends
+                Npmtrends <NewTabIcon />
               </a>
             </li>
           </ul>
@@ -89,20 +89,15 @@ export default function Footer() {
 
       <div className="box text-center">
         <div>
-          <a
-            href="https://github.com/sunny-unik"
-            target="_blank"
-            rel="noopener noreferrer"
+          <GitHubButton
+            href="https://github.com/sunny-unik/eu-country-check/fork"
+            data-color-scheme="no-preference: light; light: dark; dark: light;"
+            data-icon="octicon-repo-forked"
+            aria-label="Fork Sunny-unik/eu-country-check"
           >
-            <SimpleIcons
-              name="github"
-              alt="github profile link"
-              width="20"
-              height="20"
-              color="edf2f5"
-              darkModeColor="edf2f5"
-            />
-          </a>
+            Fork
+          </GitHubButton>
+          &nbsp;
           <GitHubButton
             href="https://github.com/sunny-unik/eu-country-check"
             data-color-scheme="no-preference: light; light: dark; dark: light;"
@@ -111,20 +106,7 @@ export default function Footer() {
           >
             Star
           </GitHubButton>
-          <a
-            href="https://www.linkedin.com/in/sunny-gandhwani"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SimpleIcons
-              name="linkedin"
-              alt="linkedin profile link"
-              width="20"
-              height="20"
-              color="edf2f5"
-              darkModeColor="edf2f5"
-            />
-          </a>
+          &nbsp;
           <GitHubButton
             href="https://github.com/sunny-unik/eu-country-check/issues"
             data-color-scheme="no-preference: light; light: dark; dark: light;"
@@ -133,20 +115,6 @@ export default function Footer() {
           >
             Issue
           </GitHubButton>
-          <a
-            href="https://twitter.com/SunnyUnik"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SimpleIcons
-              name="twitter"
-              alt="twitter profile link"
-              width="20"
-              height="20"
-              color="edf2f5"
-              darkModeColor="edf2f5"
-            />
-          </a>
         </div>
 
         <div>
