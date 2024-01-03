@@ -6,7 +6,7 @@ import GitHubButton from "react-github-btn";
 
 export default function Footer() {
   return (
-    <footer className="dark w-100 vertical-space flex column justify-content-between">
+    <footer className="dark w-100 flex column justify-content-between">
       <div className="flex small-column container justify-content-around">
         <div className="box">
           <h3 className="text-muted helvetica">Documentation</h3>
