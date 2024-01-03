@@ -135,7 +135,7 @@ a:hover {
 .nav-item a:hover {
   text-decoration: none;
 }
-.nav-item:hover {
+.nav-item:hover:not(:has(svg)) {
   background-color: black;
   border-radius: 1rem;
 }

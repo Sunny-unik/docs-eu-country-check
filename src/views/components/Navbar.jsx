@@ -1,12 +1,14 @@
 import React from "react";
 import SimpleIcons from "./SimpleIcons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import Hamburger from "./Hamburger";
 
 export default function Navbar() {
+  const isDocsRoute = useLocation().pathname.includes("/docs");
   return (
     <nav className="navbar container">
       <div className="navbar-brand">
-        <NavLink to="/">Intro</NavLink>
+        <NavLink to="/">Home</NavLink>
       </div>
       <ul className="nav-items">
         <li className="nav-item">
@@ -37,22 +39,17 @@ export default function Navbar() {
             />
           </a>
         </li>
-        <li
-          className="nav-item"
-          id="sideNavBtn"
-          onClick={() =>
-            document.querySelector(".side-nav").classList.toggle("open")
-          }
-        >
-          <SimpleIcons
-            name="x"
-            alt="x logo"
-            color="fff"
-            darkModeColor="fff"
-            width="28px"
-            height="28px"
-          />
-        </li>
+        {isDocsRoute && (
+          <li
+            className="nav-item"
+            id="sideNavBtn"
+            onClick={() =>
+              document.querySelector(".side-nav").classList.toggle("open")
+            }
+          >
+            <Hamburger />
+          </li>
+        )}
       </ul>
     </nav>
   );
