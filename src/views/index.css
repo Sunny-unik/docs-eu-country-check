@@ -41,7 +41,7 @@ a:hover {
 }
 
 .vertical-space {
-  min-height: 46vh;
+  min-height: 55vh;
 }
 
 .helvetica {
@@ -50,6 +50,9 @@ a:hover {
 
 .text-muted {
   color: var(--grey-color);
+}
+.text-dark {
+  color: var(--grey-color-dark);
 }
 
 .text-center {
@@ -104,6 +107,15 @@ a:hover {
 .column {
   flex-direction: column;
 }
+.gap-1 {
+  gap: 5px;
+}
+.gap-2 {
+  gap: 10px;
+}
+.justify-content-center {
+  justify-content: center;
+}
 .justify-content-between {
   justify-content: space-between;
 }
@@ -132,4 +144,20 @@ a:hover {
 }
 .box * :not(strong, b, pre, img, i, span, svg, br, hr) {
   margin: 4px;
+}
+
+.vr {
+  display: inline;
+  width: 2px;
+  margin: 0 5px;
+  background: #000000;
+  overflow: hidden;
+}
+
+.side-nav {
+  min-width: 100px;
+  width: 14vw;
+}
+.side-nav h4 {
+  margin-top: 5px;
 }

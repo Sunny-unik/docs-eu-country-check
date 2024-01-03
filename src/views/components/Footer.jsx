@@ -12,6 +12,9 @@ export default function Footer() {
           <h3 className="text-muted helvetica">Documentation</h3>
           <ul>
             <li>
+              <NavLink to="/docs">Getting Started</NavLink>
+            </li>
+            <li>
               <NavLink to="/docs/install">Installation</NavLink>
             </li>
             <li>

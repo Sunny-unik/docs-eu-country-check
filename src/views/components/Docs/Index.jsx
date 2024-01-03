@@ -1,11 +1,11 @@
 import React from "react";
+import SideNav from "./SideNav";
 
 function Docs() {
   return (
-    <div className="vertical-space">
-      <div className="container">
-        <h1>Getting Started</h1>
-      </div>
+    <div className="flex vertical-space container">
+      <SideNav />
+      <h1>Getting Started</h1>
     </div>
   );
 }
