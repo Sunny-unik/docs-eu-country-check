@@ -16,13 +16,8 @@ function removeAssets(dirToRemove = "dist/assets") {
 }
 removeAssets();
 
-function copyAssets(
-  sourcePath = "public",
-  destination = "dist/assets",
-  filter = (src) =>
-    nodeENV !== "production" ? src !== "public\\index.html" : true
-) {
-  fsExtra.copy(sourcePath, destination, { filter }, (error) => {
+function copyAssets(sourcePath = "public", destination = "dist/assets") {
+  fsExtra.copy(sourcePath, destination, { filter: () => true }, (error) => {
     if (error)
       return console.log(new Error("Error in update dist/assets directory"));
     console.log(chalk.green("Public directory updated successfully\n"));
