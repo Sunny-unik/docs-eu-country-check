@@ -1,5 +1,5 @@
 const fsExtra = require("fs-extra");
-const fs = require("node:fs");
+const { copyFile, rmSync } = require("node:fs");
 const chokidar = require("chokidar");
 const path = require("path");
 const chalk = require("chalk");
@@ -23,6 +23,11 @@ function copyAssets(
     if (error)
       return console.log(new Error("Error in update dist/assets directory"));
     console.log(chalk.green("Public directory updated successfully\n"));
+    process.env.NODE_ENV === "production" &&
+      copyFile("vercel.json", "dist/vercel.json", (error) => {
+        if (error) return console.log(error);
+        console.log("vercel.json copied successfully!");
+      });
   });
 }
 copyAssets();
@@ -47,7 +52,7 @@ function initChokidar() {
 
   function copyFile(sourcePath) {
     const destinationPath = path.join("dist/assets", path.basename(sourcePath));
-    fs.copyFile(sourcePath, destinationPath, (error) => {
+    copyFile(sourcePath, destinationPath, (error) => {
       if (error) return console.log(error);
       console.log(chalk.blue(sourcePath, "copied successfully"));
     });
@@ -56,7 +61,7 @@ function initChokidar() {
   function removeFile(sourcePath) {
     const destinationPath = path.join("dist/assets", path.basename(sourcePath));
     try {
-      fs.rmSync(destinationPath);
+      rmSync(destinationPath);
       console.log(chalk.blue(destinationPath, "removed successfully"));
     } catch (error) {
       console.log(error);
