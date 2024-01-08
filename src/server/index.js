@@ -18,9 +18,15 @@ app.use(express.static(path.join(__dirname, "assets")));
 app.get("/health", (_req, res) => res.send("OK"));
 
 app.get("*", (req, res) => {
-  fs.readFile(path.resolve("public/index.html"), "utf8", (err, data) => {
-    if (err) return res.status(500).send("Internal Server Error");
-
+  const htmlFilePath =
+    process.env.NODE_ENV !== "production"
+      ? "public/index.html"
+      : "assets/index.html";
+  fs.readFile(path.resolve(htmlFilePath), "utf8", (err, data) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send("Internal Server Error");
+    }
     return res.send(
       data.replace(
         '<div id="root"></div>',

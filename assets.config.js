@@ -4,6 +4,8 @@ const chokidar = require("chokidar");
 const path = require("path");
 const chalk = require("chalk");
 
+const nodeENV = process.env.NODE_ENV;
+
 function removeAssets(dirToRemove = "dist/assets") {
   try {
     fsExtra.removeSync(dirToRemove);
@@ -17,13 +19,14 @@ removeAssets();
 function copyAssets(
   sourcePath = "public",
   destination = "dist/assets",
-  filter = (src) => src !== "public\\index.html"
+  filter = (src) =>
+    nodeENV !== "production" ? src !== "public\\index.html" : true
 ) {
   fsExtra.copy(sourcePath, destination, { filter }, (error) => {
     if (error)
       return console.log(new Error("Error in update dist/assets directory"));
     console.log(chalk.green("Public directory updated successfully\n"));
-    process.env.NODE_ENV === "production" &&
+    nodeENV === "production" &&
       copyFile("vercel.json", "dist/vercel.json", (error) => {
         if (error) return console.log(error);
         console.log("vercel.json copied successfully!");
@@ -33,10 +36,7 @@ function copyAssets(
 copyAssets();
 
 function initChokidar() {
-  const watcher = chokidar.watch("public", {
-    ignoreInitial: true,
-    ignored: "public/index.html",
-  });
+  const watcher = chokidar.watch("public", { ignoreInitial: true });
 
   watcher
     .on("ready", () =>
@@ -68,4 +68,4 @@ function initChokidar() {
     }
   }
 }
-process.env.NODE_ENV === "development" && initChokidar();
+nodeENV === "development" && initChokidar();
