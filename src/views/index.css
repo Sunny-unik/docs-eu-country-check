@@ -9,6 +9,9 @@
   --premium-color: goldenrod;
   --light-icon-fill: #edf2f5;
   --light-icon-color: #32373d;
+  --pure-bg: floralwhite;
+  --highlight-bg: antiquewhite;
+  background-color: var(--pure-bg);
 }
 
 * {
@@ -87,10 +90,21 @@ a:hover {
   min-height: 55vh;
 }
 
+.bg-highlight {
+  background-color: var(--highlight-bg);
+}
+
 .helvetica {
   font-family: Helvetica, sans-serif, Arial;
 }
 
+.text-wrap {
+  text-wrap: wrap;
+}
+
+.text-red {
+  color: var(--red-as-npmjs);
+}
 .text-muted {
   color: var(--grey-color);
 }
@@ -149,6 +163,9 @@ a:hover {
 }
 .column {
   flex-direction: column;
+}
+.flex-grow-1 {
+  flex-grow: 1;
 }
 .gap-1 {
   gap: 5px;

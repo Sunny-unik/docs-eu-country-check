@@ -24,7 +24,7 @@ export default function Home() {
       {/* Info Banner Section */}
       <div className="info-banner">
         <div className="container">
-          <h4 className="helvetica">
+          <h4 className="helvetica text-wrap">
             This project help to check provided which countries are part of EU
             (European Union) or EEA (European Economic Area).
           </h4>

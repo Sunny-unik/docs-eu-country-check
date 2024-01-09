@@ -6,6 +6,7 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import App from "../views/App";
+import GlobalProvider from "../views/GlobalContext";
 
 config();
 const app = express();
@@ -19,7 +20,9 @@ app.get("/health", (_req, res) => res.send("OK"));
 app.get("*", (req, res) => {
   const appMarkup = renderToString(
     <StaticRouter location={req.url}>
-      <App />
+      <GlobalProvider>
+        <App />
+      </GlobalProvider>
     </StaticRouter>
   );
   return res.send(
