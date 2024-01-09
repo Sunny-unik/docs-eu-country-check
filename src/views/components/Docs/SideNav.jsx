@@ -7,11 +7,11 @@ export default function SideNav() {
 
   return (
     <div className="flex column side-nav gap-2">
-      <div className="box helvetica">
+      <div className="box helvetica text-nowrap-deep">
         <h4>
           <NavLink
             to="/docs"
-            className={activePage === "index" ? "text-red" : "text-dark"}
+            className={activePage === "" ? "text-red" : "text-dark"}
           >
             Getting Started
           </NavLink>

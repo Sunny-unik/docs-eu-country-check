@@ -18,7 +18,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-wrap: nowrap;
 }
 
 a {
@@ -98,8 +97,9 @@ a:hover {
   font-family: Helvetica, sans-serif, Arial;
 }
 
-.text-wrap {
-  text-wrap: wrap;
+.text-nowrap,
+.text-nowrap-deep * {
+  text-wrap: nowrap;
 }
 
 .text-red {
