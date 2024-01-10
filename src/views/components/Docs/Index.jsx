@@ -16,14 +16,15 @@ function Docs() {
       <h1>Getting Started</h1>
       <p>
         This page is an overview of the <b>Eu-country-check</b> documentation
-        and related resources.
+        and related resources. This package contains built-in Typescript
+        declarations.
       </p>
       <br />
 
       <p>
         <b>Eu-country-check</b> is a JavaScript package for provide facility to
-        filter out those countries which comes under EU (European Union) or EEA
-        (European Economic Area).
+        filter out those countries which comes under <b>EU</b> (European Union)
+        or <b>EEA</b>&nbsp;(European Economic Area).
       </p>
       <hr />
 
