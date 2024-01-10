@@ -93,7 +93,7 @@ export default function Footer() {
       <div className="box text-center">
         <div>
           <GitHubButton
-            href="https://github.com/sunny-unik/eu-country-check/fork"
+            href="https://github.com/sunny-unik/docs-eu-country-check/fork"
             data-color-scheme="no-preference: light; light: dark; dark: light;"
             data-icon="octicon-repo-forked"
             aria-label="Fork Sunny-unik/eu-country-check"
@@ -102,7 +102,7 @@ export default function Footer() {
           </GitHubButton>
           &nbsp;
           <GitHubButton
-            href="https://github.com/sunny-unik/eu-country-check"
+            href="https://github.com/sunny-unik/docs-eu-country-check"
             data-color-scheme="no-preference: light; light: dark; dark: light;"
             data-icon="octicon-star"
             aria-label="Star Sunny-unik/eu-country-check on GitHub"
@@ -111,7 +111,7 @@ export default function Footer() {
           </GitHubButton>
           &nbsp;
           <GitHubButton
-            href="https://github.com/sunny-unik/eu-country-check/issues"
+            href="https://github.com/sunny-unik/docs-eu-country-check/issues"
             data-color-scheme="no-preference: light; light: dark; dark: light;"
             data-icon="octicon-issue-opened"
             aria-label="Issue in Sunny-unik/eu-country-check on GitHub"
