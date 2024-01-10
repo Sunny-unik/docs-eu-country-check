@@ -14,10 +14,10 @@ function Docs() {
   return (
     <Layout>
       <h1>Getting Started</h1>
-      <div className="text-dark">
+      <p>
         This page is an overview of the <b>Eu-country-check</b> documentation
         and related resources.
-      </div>
+      </p>
       <br />
 
       <p>
