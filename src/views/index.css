@@ -28,6 +28,11 @@ a:hover {
   text-decoration: underline;
 }
 
+hr {
+  border-color: #ccc;
+  margin-block: 17px;
+}
+
 /* mobile only css */
 @media (max-width: 480px) {
   .small-column {
@@ -176,6 +181,12 @@ a:hover {
 .align-items-center {
   align-items: center;
 }
+.align-items-start {
+  align-items: start;
+}
+.align-items-end {
+  align-items: end;
+}
 .justify-content-center {
   justify-content: center;
 }
@@ -184,6 +195,10 @@ a:hover {
 }
 .justify-content-around {
   justify-content: space-around;
+}
+
+.m-0 {
+  margin: 0 !important;
 }
 
 .info-banner {
@@ -214,4 +229,21 @@ a:hover {
 }
 .side-nav h4 {
   margin-top: 5px;
+}
+
+.pagination-wrapper .box * {
+  color: var(--grey-color-dark);
+}
+.pagination-wrapper a:hover {
+  text-decoration: none;
+}
+.pagination-wrapper .name,
+.pagination-wrapper .box > .flex:first-child {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--premium-color);
+}
+.pagination-wrapper .box:hover .name,
+.pagination-wrapper .box:hover > .flex:first-child {
+  text-decoration-color: var(--blue-as-sky);
 }

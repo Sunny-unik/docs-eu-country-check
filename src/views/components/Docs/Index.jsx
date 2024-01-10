@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Layout from "./Layout";
 import { GlobalContext } from "../../GlobalContext";
 import BundlephobiaData from "../BundlephobiaData";
+import DocsPagination from "./DocsPagination";
 
 function Docs() {
   const setGlobalData = useContext(GlobalContext)[1];
@@ -24,8 +25,9 @@ function Docs() {
         (European Economic Area). Learn what React is all about on our homepage
         or in the tutorial.
       </p>
-      <br />
+      <hr />
       <BundlephobiaData />
+      <DocsPagination nextName="Installation" />
     </Layout>
   );
 }
