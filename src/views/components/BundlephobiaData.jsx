@@ -18,7 +18,7 @@ export default function BundlephobiaData() {
   return loading ? (
     <h6>Loading...</h6>
   ) : (
-    <pre>
+    <pre className="text-wrap">
       <b>Here Bundlephobia's Size Report:</b>{" "}
       {JSON.stringify(data, replaceSizeData, 4)}
     </pre>

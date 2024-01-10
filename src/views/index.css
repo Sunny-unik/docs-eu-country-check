@@ -102,6 +102,10 @@ hr {
   font-family: Helvetica, sans-serif, Arial;
 }
 
+.text-wrap,
+.text-wrap-deep {
+  text-wrap: wrap;
+}
 .text-nowrap,
 .text-nowrap-deep * {
   text-wrap: nowrap;
@@ -199,6 +203,12 @@ hr {
 
 .m-0 {
   margin: 0 !important;
+}
+.mt-1 {
+  margin-top: 5px;
+}
+.mt-2 {
+  margin-top: 10px;
 }
 
 .info-banner {

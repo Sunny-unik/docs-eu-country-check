@@ -19,14 +19,33 @@ function Docs() {
         and related resources.
       </div>
       <br />
+
       <p>
         <b>Eu-country-check</b> is a JavaScript package for provide facility to
         filter out those countries which comes under EU (European Union) or EEA
-        (European Economic Area). Learn what React is all about on our homepage
-        or in the tutorial.
+        (European Economic Area).
       </p>
       <hr />
+
       <BundlephobiaData />
+      <hr />
+
+      <h3>Something Missing?</h3>
+      <p className="mt-2">
+        If something is missing in the documentation or if you found some part
+        confusing, please file an issue for the documentation repository with
+        your suggestions for improvement at{" "}
+        <a
+          className="text-red"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/Sunny-unik/docs-eu-country-check/issues"
+        >
+          github
+        </a>
+        . We love hearing from you!
+      </p>
+
       <DocsPagination nextName="Installation" />
     </Layout>
   );
