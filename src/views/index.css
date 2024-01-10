@@ -5,7 +5,8 @@
   --grey-color: #ccc;
   --soft-reddish: crimson;
   --red-as-npmjs: #cb3837;
-  --blue-as-sky: #61dafb;
+  --blue-as-sky: #00b7ff;
+  --sky-blue: #00b7ff;
   --premium-color: goldenrod;
   --light-icon-fill: #edf2f5;
   --light-icon-color: #32373d;
@@ -31,6 +32,15 @@ a:hover {
 hr {
   border-color: #ccc;
   margin-block: 17px;
+}
+
+@keyframes rotate {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
 }
 
 /* mobile only css */
@@ -256,4 +266,46 @@ hr {
 .pagination-wrapper .box:hover .name,
 .pagination-wrapper .box:hover > .flex:first-child {
   text-decoration-color: var(--blue-as-sky);
+}
+
+.btn {
+  color: white;
+  padding: 0.75rem 2.5rem;
+  margin-block: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn-masterful {
+  background-color: var(--blue-as-sky);
+  color: var(--dark-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+}
+.btn-masterful .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.btn-masterful .second-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.btn-masterful .btn-txt {
+  padding-left: 0.5rem;
+}
+.btn-masterful:hover {
+  background-color: #018dc5;
+}
+.btn-masterful:hover .icon,
+.btn-masterful:hover .second-icon {
+  animation: rotate 2s linear infinite;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -18,6 +19,13 @@ export default function Home() {
             </a>
             official website.
           </h3>
+          <NavLink to="/docs">
+            <button className="btn btn-masterful">
+              <span className="icon">&#x1F680;</span>
+              <span className="btn-txt">View Documentation</span>
+              <span className="second-icon">&#x1F680;</span>
+            </button>
+          </NavLink>
         </div>
       </div>
 
